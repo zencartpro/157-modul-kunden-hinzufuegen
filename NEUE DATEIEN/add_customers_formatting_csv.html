@@ -1,0 +1,103 @@
+<!doctype html>
+<html dir="ltr" lang="de">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formatieren einer csv Datei für Massenupload</title>
+<style>
+<!--
+.style1 { color: #006600; font-weight: bold; }
+body { font-family: arial; font-size: 12px; }
+table { border-collapse: collapse; font-size: 12px; }
+td, th { border: 1px solid #404040; padding: 5px; vertical-align: top; }
+th { text-align: left; }
+.o { background-color: #f4f4f4; }
+-->
+</style>
+</head>
+<body>
+  <h2>Formatieren einer CSV-Datei für Massen-Uploads (Kunden per Admin hinzufügen in Zen Cart 1.5.7 deutsch)</h2>
+
+  <p>Die Überschriften können in beliebiger Spaltenreihenfolge stehen, solange sie in der ersten nicht leeren Zeile der hochgeladenen Datei enthalten sind. <br>
+  Die Überschriftenwerte und ihre erwarteten Daten sind:</p>
+  <table>
+    <tr class="tHead">
+      <th>Titel</th>
+      <th>Beschreibung</th>
+    </tr>
+    <tr class="o">
+      <td>gender</td>
+      <td>Wenn <em>Konfiguration->Kundendetails->Anrede</em> auf <em>true</em> gesetzt ist, muss der Wert einer von m oder M (für männlich), f oder F (für weiblich) oder d oder D für Divers sein; ansonsten wird der Wert ignoriert.</td>
+    </tr>
+    <tr>
+      <td>first_name</td>
+      <td>Die Mindestlänge wird durch <em>Konfiguration->Minimale Werte->Vorname</em> gesteuert; wenn dieser Wert 0 ist, ist dieses Feld optional.</td>
+    </tr>
+    <tr class="o">
+      <td>last_name</td>
+      <td>Die Mindestlänge wird durch <em>Konfiguration->Minimale Werte->Nachname</em> gesteuert; wenn dieser Wert 0 ist, ist dieses Feld optional.</td>
+    </tr>
+    <tr>
+      <td>dob</td>
+      <td>Wenn <em>Kundendetails->Geburtsdatum</em> auf <em>true</em> gesetzt ist, wird die Mindestlänge durch <em>Konfiguration->Minimale Werte->Geburtsdatum</em> gesteuert und das Datum muss in dem Format sein, das im Dropdown-Menü "DOB Format" ausgewählt wurde.</td>
+    </tr>
+    <tr class="o">
+      <td>email</td>
+      <td>Plichtfeld. Die Mindestlänge wird über <em>Konfiguration->Minimale Werte->E-Mail-Adresse</em> gesteuert. Unabhängig von der Mindestlänge muss der Wert eine "richtige" E-Mail-Adresse sein und darf nicht bereits von einem anderen Kunden in Ihrer Datenbank verwendet werden.</td>
+    </tr>
+    <tr>
+      <td>company</td>
+      <td>Wenn <em>Konfiguration->Kundendetails->Firma</em> auf <em>true</em> gesetzt ist, wird die Mindestlänge durch <em>Konfiguration->Minimale Werte->Firma</em> gesteuert; andernfalls wird der Wert ignoriert.</td>
+    </tr>
+    <tr class="o">
+      <td>street_address</td>
+      <td>Die Mindestlänge wird durch <em>Konfiguration->Minimale Werte->Strasse</em> gesteuert; wenn dieser Wert 0 ist, ist dieses Feld optional.</td>
+    </tr>
+    <tr>
+      <td>suburb</td>
+      <td>Wenn <em>Konfiguration->Kundendetails->Adresszeile 2</em> auf <em>false</em> gesetzt ist, wird dieses Feld nicht angezeigt; andernfalls wird das Feld angezeigt, ist aber optional.</td>
+    </tr>
+    <tr class="o">
+      <td>state</td>
+      <td>Wenn <em>Konfiguration->Kundendaten->Bubdesland</em> auf <em>false</em> gesetzt ist, wird dieses Feld ignoriert; andernfalls muss entweder dieses Feld oder das Feld <b>zone_id</b> angegeben werden.  Die Mindestlänge dieses Feldes wird durch <em>Konfiguration->Minimale Werte->Bundesland</em> gesteuert; wenn dieser Wert 0 ist, ist dieses Feld optional. Es kann entweder die Langform oder der Code, z. B. Alabama/AL (Vereinigte Staaten) oder British Columbia/BC (Kanada), verwendet werden.</td>
+    </tr>
+      <tr>  
+      <td>zone_id</td>  
+        <td>Wenn <em>Konfiguration->Kundendetails->Bundesland</em> auf <em>false</em> gesetzt ist, wird dieses Feld ignoriert; andernfalls muss entweder dieses Feld oder das Feld <b>Bundesland</b> angegeben werden.  Die numerische Zonennummer, die mit dem <b>Bundesland</b> und <b>Land</b> des Kunden verknüpft ist.</td>    
+    </tr>
+    <tr class="o">
+      <td>city</td>
+      <td>Die Mindestlänge wird über <em>Konfiguration->Minimale Werte->Stadt</em> gesteuert; ist dieser Wert 0, ist dieses Feld optional.</td>
+    </tr>
+    <tr>
+      <td>postcode</td>
+      <td>Die Mindestlänge wird durch <em>Konfiguration->Minimale Werte->Postleitzahl</em> gesteuert; wenn dieser Wert 0 ist, ist dieses Feld optional.  Wenn der Wert angegeben wird und das zugehörige Land eines der Länder Kanada, Vereinigtes Königreich oder Vereinigte Staaten ist, muss der Wert dem Postleitzahlenformat für dieses Land entsprechen.</td>
+    </tr>
+    <tr class="o">
+      <td>country</td>
+      <td>Dieses Feld ist ein Pflichtfeld und muss einen der zweistelligen ISO-Codes für eines der von Zen Cart unterstützten Länder enthalten.</td>
+    </tr>
+    <tr>
+      <td>telephone</td>
+      <td>Die Mindestlänge wird durch <em>Konfiguration->Minimale Werte->Telefonnummer</em> gesteuert; wenn dieser Wert 0 ist, ist dieses Feld optional. Wenn der Wert angegeben wird, muss sein Format dem einer internationalen Telefonnummer entsprechen.</td>
+    </tr>
+    <tr class="o">
+      <td>fax</td>
+      <td>Dieses Feld ist optional.</td>
+    </tr>
+    <tr>
+      <td>newsletter</td>
+      <td>Gibt an, ob (1) oder nicht (sonst) der Kunde für ein Newsletter-Abonnement registriert werden soll.  Wenn das Feld nicht ausgefüllt ist, ist der Kunde nicht für Ihren Newsletter angemeldet.</td>
+    </tr>
+    <tr class="o">
+      <td>send_welcome</td>
+      <td>Gibt an, ob (1) oder nicht (0) eine "Willkommens"-E-Mail an den Benutzer gesendet werden soll.  Wird das Feld nicht ausgefüllt, wird keine Willkommens-E-Mail gesendet.</td>
+    </tr>
+    <tr>
+      <td>customers_group_pricing</td>
+      <td>Dieser Wert wird als Zahl angegeben, die die <em>group_id</em> der "Gruppenpreise"-Gruppe identifiziert, der der Kunde zugeordnet werden soll.  Ein Wert von 0 zeigt an, dass der Kunde zu <b>keiner</b> solchen Gruppe gehört, d.h. zur Preisgruppe <strong>-keiner--</strong>. Wenn diese Spalte in der .csv-Datei nicht angegeben ist, wird dieser Wert für alle hinzuzufügenden Kunden auf 0 gesetzt.</td>
+    </tr>
+  </table>
+</body>
+</html>

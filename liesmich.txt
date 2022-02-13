@@ -1,0 +1,22 @@
+Kunden per Admin hinzufügen 3.0.0 für Zen Cart 1.5.7 deutsch
+
+Dieses Modul ist nur für Zen Cart 1.5.7 deutsch geeignet und kann in älteren Zen Cart Versionen nicht verwendet werden!
+
+Mit dieser Erweiterung können Kunden manuell in der Administration hinzugefügt werden.
+Dabei kann dem Kunden optional ein Willkommensemail mit seinem Passwort gemailt werden.
+
+Es ist auch ein Massenupload von Kunden aus einer csv Datei möglich.
+
+Im Ordner ANLEITUNG ist eine Beispiel csv Datei enthalten.
+Weitere Informationen zur nötigen Formatierung der csv Datei in der add_customers_formatting_csv.html sowie in der englischen Originaldoku
+
+
+Installation:
+
+Im Ordner NEUE DATEIEN den Ordner DEINADMIN auf den Namen Ihres Adminverzeichnisses umbenennen.
+Dann die Dateien/Ordner in NEUE DATEIEN in der vorgegebenen Struktur ins Zen Cart Verzeichnis hochladen.
+Dabei werden keine bestehenden Dateien überschriebenn
+
+In der Zen Cart Administration auf irgendeinen Menüpunkt clicken. Nun ist unter Kunden die neue Option Kunden hinzufügen verfügbar.
+
+Für den csv Upload muss das Verzeichnis admin/backups chmod 777 haben
