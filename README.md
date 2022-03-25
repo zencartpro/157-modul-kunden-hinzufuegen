@@ -8,6 +8,7 @@ Freigegebene getestete Versionen für den Einsatz in Livesystemen ausschließlic
 * https://github.com/zencartpro/157-modul-kunden-hinzufuegen/releases
 
 Mit dieser Erweiterung können Kunden manuell in der Administration hinzugefügt werden.
+
 Dabei kann dem Kunden optional ein Willkommensemail mit seinem Passwort gemailt werden.
 
 Es ist auch ein Massenupload von Kunden aus einer csv Datei möglich.

@@ -9,7 +9,7 @@
  * Modified for Zen Cart 1.5.0, v1.5.1, lat9 2013-05-16
  * Modified for Zen Cart 1.5.5, lat9 2015-12-24
  * Modified for Zen Cart 1.5.7+, lat9, 2021-12-06
- * Modified for Zen Cart 1.5.7 German webchills 2022-02-13
+ * Modified for Zen Cart 1.5.7 German webchills 2022-03-25
  */
 require 'includes/application_top.php';
 
@@ -192,7 +192,7 @@ if ($action == 'add_multiple') {
                        zen_draw_hidden_field('action', 'add_multiple'); ?>
             <div class="row formAreaTitle"><?php echo CUSTOMERS_BULK_UPLOAD; ?></div>
             <div class="pull-right noprint">
-                <a href="<?php echo HTTP_SERVER . DIR_WS_CATALOG; ?>add_customers_formatting_csv.html" rel="noopener" target="_blank" class="btn btn-sm btn-default btn-help" role="button" title="Help">
+                <a href="<?php echo HTTP_SERVER . DIR_WS_CATALOG; ?>add_customers_formatting_csv.html" rel="noopener" target="_blank" class="btn btn-sm btn-default btn-help" role="button" title="Hilfe">
                     <i class="fa fa-question fa-lg" aria-hidden="true"></i>
                 </a>
             </div>
