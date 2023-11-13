@@ -3,17 +3,18 @@
 // Part of the "Add Customers from Admin" plugin.
 //
 /**
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2023 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- *
+ * Zen Cart German Specific
  * add_customers module modified by Garden 2012-07-20
  * www.inzencart.cz Czech forum for ZenCart
  * Modified for Zen Cart 1.5.0, lat9 2012-08-31
  * Modified for Zen Cart 1.5.7, lat9 2021-12-06, converting to a PHP class
  * Modified for Zen Cart 1.5.7 German, webchills 2022-02-13
+ * Modified for Zen Cart 1.5.7g German, webchills 2023-11-13
  *
  */
 class addCustomers extends base
@@ -80,7 +81,7 @@ class addCustomers extends base
                     $errors[] = ERROR_CANT_MOVE_FILE;
                 } else {
                     chmod($filepath, 0775);
-                    ini_set('auto_detect_line_endings', true);
+                    
                     $lines = file($filepath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
                     $valid_headers = explode(', ', 'email, first_name, last_name, dob, gender, company, street_address, suburb, city, state, postcode, country, telephone, fax, newsletter, send_welcome, zone_id, customers_group_pricing');

@@ -1,15 +1,16 @@
 <?php
 /**
- * @copyright Copyright 2003-2022 Zen Cart Development Team
+ * @copyright Copyright 2003-2023 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- *
+ * Zen Cart German Specific
  * add_customers module modified by Garden 2012-07-20
  * www.inzencart.cz Czech forum for ZenCart
  * Modified for Zen Cart 1.5.0, v1.5.1, lat9 2013-05-16
  * Modified for Zen Cart 1.5.5, lat9 2015-12-24
  * Modified for Zen Cart 1.5.7+, lat9, 2021-12-06
  * Modified for Zen Cart 1.5.7 German webchills 2022-03-25
+ * Modified for Zen Cart 1.5.7g German webchills 2023-11-13
  */
 require 'includes/application_top.php';
 
@@ -394,7 +395,7 @@ if (ACCOUNT_STATE === 'true') {
                     <div class="form-group">
                         <?php echo zen_draw_label(ENTRY_COUNTRY, 'entry_country_id', 'class="col-sm-3 control-label"'); ?>
                         <div class="col-sm-9 col-md-6">
-                            <?php echo zen_draw_pull_down_menu('entry_country_id', zen_get_countries(), $cInfo->entry_country_id, 'class="form-control"'); ?>
+                            <?php echo zen_draw_pull_down_menu('entry_country_id', zen_get_countries_for_admin_pulldown(), $cInfo->entry_country_id, 'class="form-control"'); ?>
                         </div>
                     </div>
                 </div>
