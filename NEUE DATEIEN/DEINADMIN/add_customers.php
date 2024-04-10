@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright Copyright 2003-2023 Zen Cart Development Team
+ * @copyright Copyright 2003-2024 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
  * Zen Cart German Specific
@@ -10,7 +10,7 @@
  * Modified for Zen Cart 1.5.5, lat9 2015-12-24
  * Modified for Zen Cart 1.5.7+, lat9, 2021-12-06
  * Modified for Zen Cart 1.5.7 German webchills 2022-03-25
- * Modified for Zen Cart 1.5.7g German webchills 2023-11-13
+ * Modified for Zen Cart 1.5.7h German webchills 2024-04-10
  */
 require 'includes/application_top.php';
 

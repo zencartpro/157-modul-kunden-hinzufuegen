@@ -1,7 +1,7 @@
-Kunden per Admin hinzufügen 3.1.0 für Zen Cart 1.5.7 deutsch
+Kunden per Admin hinzufügen 3.1.1 für Zen Cart 1.5.7 deutsch
 
-Dieses Modul ist nur für Zen Cart 1.5.7g deutsch geeignet und kann in älteren Zen Cart Versionen nicht verwendet werden!
-Stellen Sie sicher, dass Sie Ihren Shop auf 1.5.7g aktualisiert haben, bevor Sie dieses Modul installieren!
+Dieses Modul ist nur für Zen Cart 1.5.7h deutsch geeignet und kann in älteren Zen Cart Versionen nicht verwendet werden!
+Stellen Sie sicher, dass Sie Ihren Shop auf 1.5.7h aktualisiert haben, bevor Sie dieses Modul installieren!
 
 Mit dieser Erweiterung können Kunden manuell in der Administration hinzugefügt werden.
 Dabei kann dem Kunden optional ein Willkommensemail mit seinem Passwort gemailt werden.

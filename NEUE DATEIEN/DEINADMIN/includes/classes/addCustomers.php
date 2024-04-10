@@ -17,6 +17,7 @@
  * Modified for Zen Cart 1.5.7g German, webchills 2023-11-13
  *
  */
+ #[AllowDynamicProperties]
 class addCustomers extends base
 {
     public function __construct()
